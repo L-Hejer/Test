@@ -5,6 +5,7 @@ import { Route } from "react-router-dom";
 import ProfileCard from './components/profileCard';
 import NavBar from './components/navBar';
 import ContactPosts from './components/contact-posts';
+import PostComments from './components/post-comments';
 
 import './App.css';
 import 'bootstrap/dist/css/bootstrap.min.css';
@@ -56,9 +57,16 @@ class App extends React.Component {
     </div>
 
      {this.state.users.map( user => <Route 
+     exact 
      path={`/${user.id}`}
      render = {() => <ContactPosts key={user.id} user={user} posts={this.state.posts.filter(post=> post.userId === user.id)}/>}
      /> )}
+
+     {this.state.posts.map( post => <Route
+     exact
+     path={`/:id/${post.id}`}
+     render = {() => <PostComments key={post.is} comments={this.state.comments.filter(comment => comment.postId === post.id)}/>}
+     />)}
     
     </div>
   )};

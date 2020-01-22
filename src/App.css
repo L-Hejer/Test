@@ -3,12 +3,14 @@
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
+  background-color: #362f55;
+
 }
 
 .name-letter{
-  height: 50px;
-  width: 50px;
-  background-color: teal;
+  height: 80px;
+  width: 80px;
+  background-color: #03bfcb;
   border-radius: 50%;
   text-align: center;
   margin: 10px 40%;
@@ -17,16 +19,47 @@
 .user-card{
   margin: 20px 20px;
 }
+.btn-card{
+  padding: 5px 10px;
+  border-radius: 5px;
+  border: transparent;
+  background-color:#03bfcb ;
+  color: white;
+}
+.btn-card:focus{
+  outline: transparent;
+}
+.btn-card-follow{
+  margin-left: 10px;
+  padding: 5px 20px;
+  border-radius: 5px;
+  border: 1px solid #03bfcb;
+  background-color:transparent ;
+  color: white;
+}
+.btn-card-follow:focus{
+  outline: transparent;
+}
 .contact-posts{
-  display:flex;
-  flex-direction: column;
+  width: 50%;
   margin: 10px 20px;
   border: transparent;
-  border-radius: 5px;
+  border-radius: 10px;
+  text-align: center;
   padding: 20px;
   color: white;
-  background-color: teal;
+  background-color: #231e39;
 }
 .post-title{
+  text-decoration: underline;
+}
+.comments{
+  margin:30px 20px;
+  color: white;
+  /* border: transparent;
+  border-radius: 10px; */
+}
+h3{
+  padding-top: 10px;
   text-decoration: underline;
 }
